@@ -58,6 +58,9 @@
 .pointer {
     cursor: pointer;
 }
+.arrow {
+    cursor: default;
+}
 .reset-margin {
     margin: 0;
 }
@@ -100,10 +103,20 @@
     font-size: 0.9rem;
     color: var(--color-gray-60);
     margin: 0.25rem 0 auto 0;
-    cursor: default;
 }
 .icon {
     height: 1.5rem;
+}
+.button {
+    width: 6rem;
+    height: 2.5rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-primary);
+    color: white;
+    text-decoration: none;
 }
 body {
     background-color: magenta;
@@ -140,7 +153,7 @@ body {
     background-color: var(--color-white);
     box-shadow: var(--shadow-down);
     z-index: 1;
-    padding: 1rem 5rem 1rem 3rem;
+    padding: 0.25rem 5rem 0.25rem 3rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -181,12 +194,19 @@ body {
 }
 .welcome {
     display: flex;
+    align-items: center;
     gap: 1rem;
 }
 .welcome > .message {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+.buttons-container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: end;
+    align-items: center;
 }
 /* ######################## */
 /* -------- NAVBAR -------- */
