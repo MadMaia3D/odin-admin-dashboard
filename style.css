@@ -34,11 +34,17 @@
 .weight-700 {
     font-weight: 700;
 }
+.origin-left {
+    transform-origin: 10% 50%;
+}
+.pop-tiny,
 .pop-small,
 .pop-medium,
 .pop-big {
-    transform-origin: center;
     transition: scale 250ms;
+}
+.pop-tiny:hover {
+    scale: 1.05;
 }
 .pop-small:hover {
     scale: 1.1;
@@ -203,7 +209,6 @@ body {
 }
 .navbar > ul > li {
     position: relative;
-    transform-origin: 0% 50%;
 }
 .navbar > ul > li > a {
     display: flex;
