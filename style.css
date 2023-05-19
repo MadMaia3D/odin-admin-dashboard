@@ -4,7 +4,7 @@
 /* ------- GLOBALS ------- */
 /* ####################### */
 :root {
-    --shadow-down: 0px 0px 4px 4px #0005;
+    --shadow-down: 0px 0px 4px 4px #0002;
     --shadow-diagonal: 4px 4px 4px #0002;
     --shadow-diagonal-hover: 4px 4px 8px 4px #0001;
 
