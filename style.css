@@ -9,13 +9,18 @@
     --shadow-diagonal-hover: 4px 4px 8px 4px #0001;
 
     --color-primary: hsl(201, 79%, 46%);
-    --color-white: #fff;
+    --color-white: hsl(0, 0%, 100%);
+    --color-gray-10: hsl(0, 0%, 90%);
+    --color-gray-20: hsl(0, 0%, 80%);
+    --color-gray-30: hsl(0, 0%, 70%);
+    --color-gray-40: hsl(0, 0%, 60%);
     --color-gray-50: hsl(0, 0%, 50%);
     --color-gray-60: hsl(0, 0%, 40%);
     --color-gray-70: hsl(0, 0%, 30%);
     --color-gray-80: hsl(0, 0%, 20%);
     --color-gray-90: hsl(0, 0%, 10%);
-    --color-black: #000;
+    --color-black: hsl(0, 0%, 0%);
+    --main-background: hsl(220, 30%, 90%);
 }
 
 .reset-margin {
@@ -33,7 +38,7 @@
 }
 .card {
     position: relative;
-    background-color: #fff;
+    background-color: var(--color-white);
     border-radius: 0.5rem;
     box-shadow: var(--shadow-diagonal);
     transition: scale 250ms, box-shadow 250ms;
@@ -49,10 +54,11 @@
 .card h3 {
     margin: 0 0 0 0;
     font-size: 1.1rem;
+    text-transform: capitalize;
 }
 .card p {
     font-size: 0.9rem;
-    color: #555;
+    color: var(--color-gray-60);
     margin: 0.25rem 0 auto 0;
 }
 body {
@@ -60,7 +66,7 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: 18rem 1fr;
-    grid-template-rows: 5rem 1fr;
+    grid-template-rows: 5rem 5rem 1fr;
     font-family: "Roboto", sans-serif;
 }
 
@@ -86,8 +92,8 @@ body {
 /* -------- HEADER -------- */
 /* ######################## */
 .header {
-    grid-area: 1/2/2/3;
-    background-color: #222;
+    grid-area: 1/2/3/3;
+    background-color: var(--color-white);
     box-shadow: var(--shadow-down);
     z-index: 1;
 }
@@ -96,7 +102,7 @@ body {
 /* -------- NAVBAR -------- */
 /* ######################## */
 .navbar {
-    grid-area: 2/1/3/2;
+    grid-area: 2/1/4/2;
     background-color: var(--color-primary);
     color: var(--color-white);
     z-index: 1;
@@ -123,7 +129,7 @@ body {
     scale: 1.1;
 }
 .navbar a {
-    color: white;
+    color: var(--color-white);
     text-decoration: none;
 }
 .navbar .icon {
@@ -135,12 +141,12 @@ body {
 /* --------- MAIN --------- */
 /* ######################## */
 .main {
-    background-color: hsl(220, 30%, 90%);
-    grid-area: 2/2/3/3;
+    background-color: var(--main-background);
+    grid-area: 3/2/4/3;
     display: grid;
     grid-template-columns: auto 15rem;
     gap: 1.5rem;
-    padding: 3rem 1.5rem;
+    padding: 2.5rem 1.5rem;
     overflow-y: scroll;
 }
 .projects-container > .grid-layout {
@@ -150,8 +156,9 @@ body {
     gap: 1.5rem;
 }
 .article-title {
-    margin-bottom: 1rem;
+    margin: 0 0 1rem 0.1rem;
     font-size: 1.25rem;
+    color: var(--color-gray-90);
 }
 .projects-container .card::before {
     content: "";
@@ -168,6 +175,7 @@ body {
 .card .icon {
     height: 1.5rem;
     transition: scale 250ms;
+    filter: invert(1) brightness(30%);
 }
 .card .icon:hover {
     scale: 1.3;
