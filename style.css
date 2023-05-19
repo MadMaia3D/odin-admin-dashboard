@@ -3,6 +3,11 @@
 /* ####################### */
 /* ------- GLOBALS ------- */
 /* ####################### */
+:root {
+    --shadow-down: 0px 0px 4px 4px #0005;
+    --shadow-diagonal: 0px 4px 4px #0004;
+}
+
 .reset-margin {
     margin: 0;
 }
@@ -15,6 +20,30 @@
 }
 .debug {
     outline: 1px solid red;
+}
+.card {
+    position: relative;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-diagonal);
+    transition: scale 500ms, box-shadow 500ms;
+    padding: 2rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.card:hover {
+    scale: 1.03;
+    box-shadow: 4px 4px 8px #0004;
+}
+.card h3 {
+    margin: 0 0 0 0;
+    font-size: 1.1rem;
+}
+.card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0.25rem 0 auto 0;
 }
 body {
     background-color: magenta;
@@ -35,8 +64,9 @@ body {
     display: flex;
     justify-content: start;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
     padding-left: 1.5rem;
+    z-index: 2;
 }
 .logo {
     filter: invert(100%);
@@ -48,6 +78,8 @@ body {
 .header {
     grid-area: 1/2/2/3;
     background-color: #222;
+    box-shadow: var(--shadow-down);
+    z-index: 1;
 }
 
 /* ######################## */
@@ -57,6 +89,7 @@ body {
     grid-area: 2/1/3/2;
     background-color: #222;
     color: white;
+    z-index: 1;
 }
 .navbar > ul {
     margin: 2rem 0 3rem 0;
@@ -84,31 +117,41 @@ body {
 /* --------- MAIN --------- */
 /* ######################## */
 .main {
-    background-color: #ccc;
+    background-color: hsl(220, 30%, 90%);
     grid-area: 2/2/3/3;
     display: grid;
     grid-template-columns: auto 15rem;
     gap: 1.5rem;
-    padding: 2rem 1.5rem;
+    padding: 3rem 1.5rem;
 }
 .projects-container > .grid-layout {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-    grid-auto-rows: 15rem;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    grid-auto-rows: 12rem;
     gap: 1.5rem;
 }
 .article-title {
     margin-bottom: 1rem;
+    font-size: 1.25rem;
 }
-.card {
-    background-color: #fff;
-    border-radius: 0.5rem;
-    box-shadow: 4px 4px 4px #0004;
-    transition: 400ms;
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 0.5rem;
+    background-color: orange;
 }
-.card:hover {
-    scale: 1.03;
-    box-shadow: 4px 4px 8px #0004;
+.card .icons {
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+}
+.card .icon {
+    height: 1.5rem;
+    transition: scale 500ms;
+}
+.card .icon:hover {
+    scale: 1.3;
 }
 
 .announcements-container > .grid-layout {
