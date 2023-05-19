@@ -25,6 +25,15 @@
 * {
     box-sizing: border-box;
 }
+.weight-400 {
+    font-weight: 400;
+}
+.weight-500 {
+    font-weight: 500;
+}
+.weight-700 {
+    font-weight: 700;
+}
 .reset-margin {
     margin: 0;
 }
@@ -102,7 +111,7 @@ body {
     background-color: var(--color-white);
     box-shadow: var(--shadow-down);
     z-index: 1;
-    padding: 1rem 3rem;
+    padding: 1rem 5rem 1rem 3rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -112,9 +121,6 @@ body {
     align-items: center;
     gap: 1rem;
 }
-.header > .search > .icon {
-    height: 1.5rem;
-}
 .header > .search > .bar {
     height: 2rem;
     flex: 1;
@@ -123,6 +129,18 @@ body {
     border: none;
     border-radius: 1rem;
     padding-left: 0.75rem;
+}
+.header > .profile {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.header > .profile > .profile-image {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: red;
 }
 /* ######################## */
 /* -------- NAVBAR -------- */
@@ -137,7 +155,6 @@ body {
     margin: 2rem 0 3rem 0;
     list-style: none;
     font-size: 1.15rem;
-    font-weight: 700;
     padding-left: 2rem;
     display: flex;
     flex-direction: column;
