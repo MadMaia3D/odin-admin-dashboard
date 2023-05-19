@@ -71,6 +71,10 @@ body {
     gap: 1rem;
     align-items: center;
 }
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
 .navbar .icon {
     height: 1.25rem;
     filter: invert(100%);
