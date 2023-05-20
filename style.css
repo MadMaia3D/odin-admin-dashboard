@@ -307,17 +307,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    /* height: 15rem; */
     margin-bottom: 3rem;
 }
 .trend {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    /* height: 15rem; */
     margin-bottom: 3rem;
 }
-/* @media screen and (min-width: 768px) {
-}
-@media screen and (min-width: 1200px) {
-} */
