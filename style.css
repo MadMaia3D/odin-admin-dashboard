@@ -52,6 +52,12 @@
 .weight-700 {
     font-weight: 700;
 }
+.capitalize {
+    text-transform: capitalize;
+}
+.lowercase {
+    text-transform: lowercase;
+}
 .origin-left {
     transform-origin: 10% 50%;
 }
@@ -104,12 +110,7 @@
     scale: 1.03;
     box-shadow: var(--shadow-diagonal-hover);
 }
-.card h3 {
-    margin: 0 0 0 0;
-    text-transform: capitalize;
-}
 .card p {
-    /* font-size: 0.9rem; */
     color: var(--color-gray-60);
     margin: 0.25rem 0 auto 0;
 }
@@ -309,9 +310,14 @@ body {
     justify-content: space-evenly;
     margin-bottom: 3rem;
 }
-.trend {
+.trending-card {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     margin-bottom: 3rem;
+    gap: 1rem;
+}
+.trend {
+    display: flex;
+    gap: 1rem;
 }
